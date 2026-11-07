@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Readia
 
-## Getting Started
+## Resumen
 
-First, run the development server:
+Base web de Readia, un proyecto académico para orientar la adopción de IA a partir de un diagnóstico de capacidades de TI. Esta rama incluye una página de presentación, datos de ejemplo del diagnóstico e inicio de sesión con Supabase.
+
+## Alcance de esta rama
+
+- La [página de presentación](src/app/page.tsx) explica la propuesta y muestra un ejemplo de niveles, brechas y prioridades.
+- [src/content/demo-rows.json](src/content/demo-rows.json) contiene datos de demostración.
+- Las rutas autenticadas incluyen una estructura inicial de panel en [src/app](src/app).
+
+## Desarrollo local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Completa `NEXT_PUBLIC_SUPABASE_URL` y `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` con la configuración de cliente de un proyecto de pruebas. Abre `http://localhost:3000`. La aplicación usa Next.js, TypeScript y Supabase.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## English summary
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The web foundation for Readia, an academic project exploring how an IT readiness assessment can guide AI adoption. This branch includes a landing page, sample assessment data, and Supabase sign-in.
