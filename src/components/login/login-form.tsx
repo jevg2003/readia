@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { LoginButtons } from "@/components/login/login-buttons";
+import { hasSupabaseConfig } from "@/utils/supabase/config";
+import Link from "next/link";
 
 export function LoginForm({
   className,
@@ -22,7 +24,19 @@ export function LoginForm({
               </div>
 
               <div className="flex flex-col gap-4">
-                <LoginButtons />
+                {hasSupabaseConfig ? (
+                  <LoginButtons />
+                ) : (
+                  <p role="status" className="text-muted-foreground text-center text-sm">
+                    El inicio de sesión está temporalmente fuera de servicio.
+                  </p>
+                )}
+                <Link
+                  href="/demo"
+                  className="text-primary text-center text-sm font-semibold underline underline-offset-4"
+                >
+                  Ver diagnóstico de ejemplo
+                </Link>
               </div>
             </div>
           </form>

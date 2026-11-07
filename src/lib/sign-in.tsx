@@ -5,9 +5,6 @@ type SignInResult = { provider: SignInProviders };
 export type SignInProviders = "google" | "github";
 export type SignInFunction = (next?: string) => Promise<SignInResult>;
 
-// Cliente supabase
-const supabase = createClient();
-
 // Login con Google
 export const signInWithGoogle: SignInFunction = async (next?: string) => {
   return await signIn("google", next);
@@ -19,6 +16,7 @@ export const signInWithGitHub: SignInFunction = async (next?: string) => {
 };
 
 const signIn = async (provider: SignInProviders, next?: string) => {
+  const supabase = createClient();
   const redirectTo = buildRedirectUrl(next);
   await supabase.auth.signInWithOAuth({
     provider: provider,

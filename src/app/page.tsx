@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero ctaHref="/demo" ctaText="Ver diagnóstico de ejemplo" />
        <section className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50/30 dark:from-slate-900 dark:to-blue-900/20 py-20">
         <div className="container mx-auto px-4 md:px-6">
            <DiagnosisTable rows={demoRows} />
