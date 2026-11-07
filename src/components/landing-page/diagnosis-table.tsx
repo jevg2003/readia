@@ -73,7 +73,7 @@ export function DiagnosisTable({ rows }: DiagnosisTableProps) {
                     {getValidNivel(r.nivel)}
                   </span>
                 </div>
-                <div className="text-slate-700 dark:text-slate-300 truncate" title={r.brecha || "Sin información"}>
+                <div className="text-slate-700 dark:text-slate-300">
                   {r.brecha || "Sin información"}
                 </div>
                 <div className={`font-semibold ${
@@ -83,7 +83,7 @@ export function DiagnosisTable({ rows }: DiagnosisTableProps) {
                 }`}>
                   {getValidPrioridad(r.prioridad)}
                 </div>
-                <div className="text-slate-700 dark:text-slate-300 truncate" title={r.evidencias || "Sin evidencias"}>
+                <div className="text-slate-700 dark:text-slate-300">
                   {r.evidencias || "Sin evidencias"}
                 </div>
               </div>
@@ -138,7 +138,7 @@ export function DiagnosisTable({ rows }: DiagnosisTableProps) {
 
       {/* Nota al pie */}
       <div className="mt-6 md:mt-8 text-xs text-slate-500 dark:text-slate-400 text-center">
-        Este diagnóstico es una evaluación preliminar. Para un análisis detallado, contacte a nuestros especialistas.
+        Los niveles, las brechas y las evidencias de este diagnóstico son ilustrativos.
       </div>
     </div>
   );

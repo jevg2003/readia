@@ -2,8 +2,22 @@ import { NextResponse, type NextRequest } from "next/server";
 import { updateSession } from "@/utils/supabase/middleware";
 import { validationSession } from "@/utils/middlewares/validation-session";
 import { rootRedirect } from "@/utils/middlewares/root-redirect";
+import { hasSupabaseConfig } from "@/utils/supabase/config";
+import { redirectToLogin } from "@/utils/redirects";
 
 export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  if (pathname === "/demo") {
+    return NextResponse.next();
+  }
+
+  if (!hasSupabaseConfig) {
+    if (pathname === "/" || pathname === "/login") {
+      return NextResponse.next();
+    }
+    return redirectToLogin({ request }) ?? NextResponse.redirect(new URL("/login", request.url));
+  }
+
   // handlers: deben devolver NextResponse SOLO si quieren terminar la request
   const handlers = [
     rootRedirect,
