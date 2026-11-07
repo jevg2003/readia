@@ -2,7 +2,13 @@
 
 Proyecto académico sobre diagnóstico de capacidades de TI para orientar la adopción de IA. Esta base web incluye una página de presentación, una demostración con datos ficticios e inicio de sesión con Supabase cuando está configurado.
 
-[Ver Readia](https://readia.vercel.app/) · [Abrir la demostración](https://readia.vercel.app/demo) · [Código fuente](https://github.com/jevg2003/readia)
+[Código fuente](https://github.com/jevg2003/readia)
+
+## Vista de la interfaz
+
+![Interfaz de presentación de Readia con una tabla ilustrativa de madurez en IA](docs/screenshot.png)
+
+Captura de la interfaz de presentación y demostración preliminar publicada. Los datos son ilustrativos; esta vista puede diferir de la rama actual. Para revisar el ejemplo de esta rama, ejecuta la ruta local `/demo`.
 
 ## Alcance y estado
 
